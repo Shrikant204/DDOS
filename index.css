@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 300px;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s, box-shadow 0.3s;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.repo-box {
+    padding: 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+    cursor: pointer;
+}
+
+.repo-box:hover {
+    transition: background-color 0.3s;
+}
+
+.repo-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.repo-description {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f6f8fa;
+    color: #24292e;
+}
+
+.light-mode h1 {
+    color: #0366d6;
+}
+
+.light-mode .search-container input {
+    border: 1px solid #d1d5da;
+    background-color: white;
+    color: #24292e;
+    box-shadow: inset 0 1px 0 rgba(225, 228, 232, 0.2);
+}
+
+.light-mode .search-container button {
+    border: 1px solid #d1d5da;
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 1px 0 rgba(27, 31, 35, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.light-mode .search-container button:hover {
+    background-color: #22863a;
+}
+
+.light-mode .repo-box {
+    border: 1px solid #e1e4e8;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12), 0 1px 2px rgba(27, 31, 35, 0.24);
+}
+
+.light-mode .repo-box:hover {
+    background-color: #f6f8fa;
+}
+
+.light-mode .repo-name {
+    color: #0366d6;
+}
+
+.light-mode .repo-description {
+    color: #586069;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.dark-mode h1 {
+    color: #58a6ff;
+}
+
+.dark-mode .search-container input {
+    border: 1px solid #30363d;
+    background-color: #161b22;
+    color: #c9d1d9;
+    box-shadow: inset 0 1px 0 rgba(225, 228, 232, 0.1);
+}
+
+.dark-mode .search-container button {
+    border: 1px solid #30363d;
+    background-color: #238636;
+    color: white;
+    box-shadow: 0 1px 0 rgba(27, 31, 35, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.dark-mode .search-container button:hover {
+    background-color: #2ea043;
+}
+
+.dark-mode .repo-box {
+    border: 1px solid #30363d;
+    background-color: #161b22;
+    box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12), 0 1px 2px rgba(27, 31, 35, 0.24);
+}
+
+.dark-mode .repo-box:hover {
+    background-color: #21262d;
+}
+
+.dark-mode .repo-name {
+    color: #58a6ff;
+}
+
+.dark-mode .repo-description {
+    color: #8b949e;
+}
+
+/* Toggle Switch Styles */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#toggle-label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: inherit;
+}
